@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableHighlight } from "react-native";
 
 import styles from "./SignUp.styles";
 
@@ -14,6 +14,13 @@ export default class SignUp extends Component {
       <View style={styles.container}>
         <Text style={styles.title}>Sign up for ShatApp</Text>
         <Form ref="form" type={Person} options={formOptions} />
+        <TouchableHighlight
+          style={styles.button}
+          onPress={this.onSubmit}
+          underlayColor="#99d9f4"
+        >
+          <Text style={styles.buttonText}>Sign up</Text>
+        </TouchableHighlight>
       </View>
     );
   }
